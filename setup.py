@@ -1,4 +1,4 @@
-import package2
+import mastery
 from setuptools import setup, find_packages
 import os
 
@@ -19,16 +19,22 @@ with open('requirements.txt') as f:
     requirements = f.read().splitlines()
 
 
-here = os.path.abspath(os.path.dirname(__file__))
-
 
 setup(
     name="python-mastery",
-    version=package2.__version__,
+    version=mastery.__version__,
     description='Python Mastery Project',  # Optional
-    packages=find_packages(
+    author='youngstone89',  # Optional
+    author_email='youngstone89@icloud.com',  # Optional
+
+    packages=find_packages( # Required
         where='.',
         include=["*"],
         exclude=[]
     ),
+    python_requires='>=3.8, <4',
+    install_requires=requirements,
+    project_urls={  # Optional
+        'Source': 'https://github.com/youngstone89/python-mastery',
+    },
 )
