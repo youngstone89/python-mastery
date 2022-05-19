@@ -1,26 +1,34 @@
-import setuptools
+import package2
+from setuptools import setup, find_packages
+import os
 
-with open("README.md", "r", encoding="utf-8") as fh:
-    long_description = fh.read()
+packages = find_packages()
+print(packages)
 
-setuptools.setup(
-    name="example-package-youngstone89",
-    version="0.0.1",
-    author="youngstone89",
-    author_email="youngstone89@example.com",
-    description="A small example package",
-    long_description=long_description,
-    long_description_content_type="text/markdown",
-    url="https://github.com/pypa/sampleproject",
-    project_urls={
-        "Bug Tracker": "https://github.com/pypa/sampleproject/issues",
-    },
-    classifiers=[
-        "Programming Language :: Python :: 3",
-        "License :: OSI Approved :: MIT License",
-        "Operating System :: OS Independent",
-    ],
-    package_dir={"": "src"},
-    packages=setuptools.find_packages(where="src"),
-    python_requires=">=3.8",
+
+PKG='src'
+filepath = os.path.abspath(__file__)
+dirname = os.path.dirname(filepath)
+pkgpath = os.path.join(dirname,PKG)
+print(filepath)
+print(dirname)
+print(pkgpath)
+
+
+with open('requirements.txt') as f:
+    requirements = f.read().splitlines()
+
+
+here = os.path.abspath(os.path.dirname(__file__))
+
+
+setup(
+    name="python-mastery",
+    version=package2.__version__,
+    description='Python Mastery Project',  # Optional
+    packages=find_packages(
+        where='.',
+        include=["*"],
+        exclude=[]
+    ),
 )
