@@ -9,13 +9,13 @@ def echo(phrase: str) -> None:
    # valuable and reusable logic inside this function
    print(phrase)
 
-def main() -> int:
-    """Echo the input arguments to standard output"""
-    sysarg = sys.argv
-    print(sysarg)
-    phrase = shlex.join(sysarg)
-    echo(phrase)
-    return 0
+# def main() -> int:
+#     """Echo the input arguments to standard output"""
+#     sysarg = sys.argv
+#     print(sysarg)
+#     phrase = shlex.join(sysarg)
+#     echo(phrase)
+#     return 0
 
-if __name__ == '__main__':
-    sys.exit(main())  # next section explains the use of sys.exit
+# if __name__ == '__main__':
+#     sys.exit(main())  # next section explains the use of sys.exit
