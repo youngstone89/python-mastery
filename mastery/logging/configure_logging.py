@@ -1,11 +1,12 @@
 import logging
+import sys
 
 # create logger
 logger = logging.getLogger('simple_example')
 logger.setLevel(logging.DEBUG)
 
 # create console handler and set level to debug
-ch = logging.StreamHandler()
+ch = logging.StreamHandler(sys.stdout)
 ch.setLevel(logging.DEBUG)
 
 # create formatter
