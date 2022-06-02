@@ -16,6 +16,6 @@ def example():
 example()
 
 
-example.__name__
+print(example.__name__)
 
-example.__doc__
+print(example.__doc__)
