@@ -1,0 +1,3 @@
+Sequence in Python is an ordered collection of items,
+where each item holds relative position. 
+for example, a list of integers [1,2,3,4]
