@@ -23,3 +23,11 @@ print(y['Hobbies'])
 hobbies = y['Hobbies']
 for h in hobbies:
     print(h)
+    
+
+
+
+x = '{\"Name\":\"Jennifer Smith\",\"Contact Number\":7867567898,\"Email\":\"jen123@gmail.com\"}'
+z = json.loads(x)
+print(z['Name'])
+print(z['Contact Number'])

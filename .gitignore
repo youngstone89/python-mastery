@@ -1,9 +1,6 @@
 dist
 build
 env
-tests/__pycache__/sample_test.cpython-38-pytest-7.1.2.pyc
-tests/__pycache__/string_test.cpython-38-pytest-7.1.2.pyc
-tests/__pycache__/test_class.cpython-38-pytest-7.1.2.pyc
-tests/__pycache__/widget_test.cpython-38-pytest-7.1.2.pyc
+*.pyc
 .gitignore
 mastery/threads/texts/*.txt
